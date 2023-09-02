@@ -1,7 +1,9 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
+const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
+require('dotenv').config();
+
+const token = process.env.DISCORD_BOT_TOKEN;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions], });
 
@@ -24,6 +26,7 @@ for (const file of commandFiles) {
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
 client.once(Events.ClientReady, c => {
 	console.log(`Ready! Logged in as ${c.user.tag}`);
+	client.user.setActivity('/help');
 });
 
 client.on(Events.InteractionCreate, async interaction => {
@@ -35,7 +38,6 @@ client.on(Events.InteractionCreate, async interaction => {
 		console.error(`No command matching ${interaction.commandName} was found.`);
 		return;
 	}
-
 	try {
 		await command.execute(interaction);
 	} catch (error) {
