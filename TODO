@@ -1,0 +1,71 @@
+
+Completed = -
+Not Completed = *
+
+JÖRGEN PYTHON > JAVASCRIPT REWORK
+
+Commands:
+    - Gamble
+    - Bluestolvan
+    - Daily
+    - Selfie
+    - Balance
+    - Leaderboard
+    * Give
+    * quiz
+    * Sjung
+    * Poll
+
+quiz TODO {
+    - select question and send
+    - Cooldown system
+    - Get user input
+    - Validate Answer
+    - Add user to userquizdata
+    - Add coins to user
+    * Rework HaveUserAnsweredQuestion function
+}
+
+give TODO {
+    * Get give users username
+    - Check if author is in database
+    * Check if user to give is in database (Get username)
+    - Give coins to user and remove from author
+}
+
+sjung TODO {
+    *EVERYTHING
+}
+
+gamble TODO {
+    Gamble Userdata total amount
+}
+
+Add later {
+    Level System:
+        Get XP from using JÖRGEN Commands
+        add xp to sql database
+        get 250 xp from every command
+}
+
+ - Reworked the db_connect.js functions
+
+ - GetUserBalance
+ - GetUserQuizCooldown
+ - GetUserDailyCooldown
+ - GetAllQuestions
+ - getUserdataQuiz
+ - HaveUserAnsweredAllQuestions
+ - SetUserDailyCooldown
+ - IsUserInDatabase
+ - AddUserToDatabase
+ - AddCoinsToUser
+ - RemoveCoinsFromUser
+ - getUserdataCoins
+
+Shop System
+
+Items / Commands to buy {
+    How to store items: id, item.
+    Inventory system: 
+}
