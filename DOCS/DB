@@ -1,0 +1,21 @@
+JORGBOT DATABASE:
+    users:
+        id
+        user_id
+        username
+        balance
+        daily_cooldown
+        quiz_cooldown
+        xp
+    questions:
+        id
+        question
+        answer1
+        answer2
+        answer3
+        value
+
+    quiz_userdata:
+        question_id
+        user_id
+        
